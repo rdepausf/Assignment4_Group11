@@ -1,0 +1,66 @@
+﻿<head>
+    <link rel="stylesheet" type="text/css" href="css/temp.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="~/js/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+    <canvas id="bar-chart-horizontal" width="1600" height="450" backgroundColor="gray"></canvas>
+
+    <div>
+        <div class="w3-row-padding w3-center w3-margin-top">
+            <div class="w3-third">
+                <div class="w3-card w3-container" style="min-height:260px">
+                    <h3>Class I</h3><br>
+                    <p>Products that might cause a temporary health problem, or pose only a slight threat of a serious nature. Example: a drug that is under-strength but that is not used to treat life-threatening situations.</p>
+
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card w3-container" style="min-height:260px">
+                    <h3>Class II</h3><br>
+                    <p>Dangerous or defective products that predictably could cause serious health problems or death. Examples include: food found to contain botulinum toxin, food with undeclared allergens, a label mix-up on a lifesaving drug, or a defective artificial heart valve.</p>
+
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card w3-container" style="min-height:260px">
+                    <h3>Class III</h3><br>
+                    <p>Products that are unlikely to cause any adverse health reaction, but that violate FDA labeling or manufacturing laws. Examples include: a minor container defect and lack of English labeling in a retail food.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Class I", "Class II", "Class III"],
+      datasets: [
+        {
+          label: "Product",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,734]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Product by Class  '
+      }
+    }
+
+});</script>
+<footer id="footer">
+    <div class="container">
+
+        <ul class="copyright">
+        </ul>
+    </div>
+</footer>
