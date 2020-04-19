@@ -57,7 +57,6 @@ namespace Assignment4_FoodRecall.APIHandlerManager
 
                     // JsonConvert is part of the NewtonSoft.Json Nuget package
                     data = JsonConvert.DeserializeObject<RootObject>(apiData, settings);
-                    //data = JsonConvert.DeserializeObject<RootObject>(apiData);
                 }
             }
             catch (Exception e)
